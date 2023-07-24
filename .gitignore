@@ -5,6 +5,7 @@ config.env
 node_modules/
 
 # Others
+src/database.json
 
 # data-auth
 yarn-error.log
