@@ -1,0 +1,73 @@
+{
+  "name": "DrkBot-MD",
+  "version": "1.0.0",
+  "description": "Project DrkBot helping to improve your Whatsapp experience.",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "supervisor -s index.js"
+  },
+  "keywords": [
+    "2023",
+    "baileys-md",
+    "bot",
+    "bot-md",
+    "multi-device",
+    "termux",
+    "whatsapp"
+  ],
+  "author": "IanVanh.",
+  "license": "MIT",
+  "dependencies": {
+    "@adiwajshing/baileys": "npm:baileys@^6.0.7",
+    "@adiwajshing/keyed-db": "^0.2.4",
+    "acrcloud": "^1.4.0",
+    "awesome-phonenumber": "^2.64.0",
+    "axios": "^0.24.0",
+    "chalk": "^4.1.2",
+    "cheerio": "^1.0.0-rc.10",
+    "child_process": "^1.0.2",
+    "crypto": "^1.0.1",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.0.0",
+    "file-type": "^16.5.3",
+    "fluent-ffmpeg": "^2.1.2",
+    "fs": "0.0.1-security",
+    "google-it": "^1.6.2",
+    "google-translate-tts": "^0.4.0-dev",
+    "got": "^11.8.3",
+    "jimp": "^0.16.1",
+    "jsdom": "^16.4.0",
+    "link-preview-js": "^2.1.19",
+    "moment-timezone": "^0.5.34",
+    "node-cron": "^3.0.0",
+    "node-fetch": "^2.6.1",
+    "node-webpmux": "^3.1.0",
+    "openai": "^3.3.0",
+    "os": "^0.1.2",
+    "path": "^0.12.7",
+    "perf_hooks": "0.0.1",
+    "pino": "^7.0.5",
+    "qrcode": "^1.5.0",
+    "qrcode-terminal": "^0.12.0",
+    "request": "^2.88.2",
+    "simple-git": "2.37.0",
+    "supervisor": "^0.12.0",
+    "syntax-error": "1.4.0",
+    "util": "^0.12.4",
+    "yargs": "^17.2.1"
+  },
+  "directories": {
+    "lang": "lang",
+    "lib": "lib",
+    "src": "src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DrkBotBase/MyBot_V2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DrkBotBase/MyBot_V2/#"
+  },
+  "homepage": "https://github.com/DrkBotBase/MyBot_V2#readme"
+}

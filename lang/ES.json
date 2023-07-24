@@ -1,0 +1,53 @@
+{
+  "__JSON__": true,
+  "LANGUAGE": "Español",
+  "LANGCODE": "es",
+  "AUTHOR": "Ian VanH",
+  "STRINGS": {
+    "updater": {
+      "UPDATE": "*Tu bot está completamente actualizado!*",
+      "NEW_UPDATE": "*Hay una nueva actualización disponible para el bot!*\n\nCambios:\n```",
+      "UPDATED_LOCAL": "*La actualización fue exitosa!"
+    },
+    "sticker": {
+      "quot": "Responder video/imagen\n{} nombre sticker",
+      "time_wait": "Máximo 10 segundos!",
+      "end": "Responder video/imagen\n{} nombre sticker\nDuración del video 1-10 segundos"
+    },
+    "emojimix": {
+      "msg": "*Ejemplo:* {} 😅+🤔"
+    },
+    "ia": {
+      "msg": "🤖 *Si aquí estoy*",
+      "name": "mi nombre es {}",
+      "gpt_msg": "Que deseas buscar?"
+    },
+    "shazam": {
+      "quot": "*Responde el audio que deseas analizar.*",
+      "err": "*No se encontraron datos sobre el audio. Intenta con otro :(*",
+      "image": "*No se pueden analizar imagenes, solo audio!*",
+      "video": "*No se pueden analizar videos, solo audio!*"
+    },
+    "own": {
+      "public": "Ahora todos pueden usar el Bot.",
+      "self": "Solo tu puedes usar el Bot"
+    },
+    "global": {
+      "by": "Hecho por {}",
+      "block": "Estás bloqueado.",
+      "endLimit": "Su límite diario ha expirado, el límite se restablecerá cada 12 horas",
+      "err": "🤖 Parece que tenemos un error.\nIntenta nuevamente.",
+      "welcome": "¡Hola! Soy *DarkBox*, tu asistente personal. Estoy acá para ayudarte con tus consultas. Si necesitas algo, no dudes en preguntarme.\n\nSi deseas saber que puedo hacer sólo escribe la palabra 'funciones'\n\n¿Por dónde quieres empezar? 😊",
+      "no_points": "Creditos insuficientes.\nActualiza a premium.",
+      "owner": "Funciones especiales del propietario del bot.",
+      "success": "✓ Funcion realizada con exito."
+    },
+    "work_type": {
+      "public": "🤖 *DrkBot funciona en modo publico*\n\n_No probar los comandos aca. Este es tu espacio de LOG._\n_Puedes probar los comandos en cualquier chat._",
+      "private": "🤖 *DrkBot funciona en modo privado*\n\n_No probar los comandos aca. Este es tu espacio de LOG._\n_Puedes probar los comandos en cualquier chat._"
+    },
+    "err": {
+      "msgReport": "REPORTE DE ERROR"
+    }
+  }
+}
