@@ -4,38 +4,17 @@
     "name": "🤖 DarkBox",
     "premium": true,
     "block": false,
-    "usage": 7,
-    "cash": 8,
-    "conversationHistory": [
-      {
-        "role": "user",
-        "content": "conoces alguna api para crear emojis",
-        "timestamp": 1690222641925
-      },
-      {
-        "role": "assistant",
-        "content": "¡Hola! Si estás buscando una API para crear emojis, te recomendaría echarle un vistazo a la API \"Emojicomb\". Esta API te permite crear combinaciones de emojis, mezclando diferentes partes del emoji para crear uno nuevo y único. Puedes experimentar y ser creativo con la apariencia de tus emojis.\n\nAdemás, si estás interesado en utilizar emojis predefinidos, puedes considerar la API \"OpenMoji\". Esta API te da acceso a una amplia colección de emojis de código abierto que puedes utilizar en tus proyectos.\n\n¡Diviértete creando tus propios emojis!",
-        "timestamp": 1690222641928
-      },
-      {
-        "role": "user",
-        "content": "y una para pasar archivos a pdf",
-        "timestamp": 1690222708719
-      },
-      {
-        "role": "assistant",
-        "content": "¡Claro! Existen varias opciones para convertir archivos a formato PDF utilizando una API.\n\nUna opción popular es utilizar la API de PDFShift. Esta API te permite convertir archivos HTML, URL y documentos de Office (como Word y Excel) a PDF de manera sencilla. Solo necesitas realizar una solicitud HTTP con los datos necesarios y recibirás el archivo PDF generado como respuesta.\n\nOtra opción es utilizar la API de CloudConvert. Esta API es bastante versátil y te permite convertir una amplia variedad de formatos de archivo a PDF, incluyendo documentos de texto, imágenes, presentaciones, hojas de cálculo, entre otros. Solo tienes que proporcionar el archivo original y seleccionar el formato de salida como PDF.\n\nRecuerda revisar la documentación de cada API para obtener más detalles sobre la integración y las opciones disponibles. ¡Espero que esta información te sea útil!",
-        "timestamp": 1690222708722
-      }
-    ]
+    "usage": 0,
+    "cash": 10000,
+    "conversationHistory": []
   },
   "573508770421@s.whatsapp.net": {
     "id": "IzryO9",
     "name": "ঔৣ͜͡➳ IAN ❮❂❯",
-    "premium": false,
+    "premium": true,
     "block": false,
     "usage": 0,
-    "cash": 10,
+    "cash": 10000,
     "conversationHistory": []
   }
 }
