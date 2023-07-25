@@ -64,10 +64,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DrkBotBase/MyBot_V2.git"
+    "url": "git+https://github.com/ianvanh/dylan.git"
   },
   "bugs": {
-    "url": "https://github.com/DrkBotBase/MyBot_V2/#"
+    "url": "https://github.com/ianvanh/dylan#"
   },
-  "homepage": "https://github.com/DrkBotBase/MyBot_V2#readme"
+  "homepage": "https://github.com/ianvanh/dylan#readme",
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.4.0"
+  }
 }
