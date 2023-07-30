@@ -45,7 +45,7 @@ global.BOX = {
 
 // Global Images
 global.thumb = readFileSync("./lib/bot.jpg");
-global.planes = readFileSync("./lib/planes.png");
+global.planes = readFileSync("./lib/planes.jpg");
 global.rulesImg = readFileSync("./lib/rules.jpg");
 global.maintenance = "https://telegra.ph/file/fb1477894bdd05a7d9851.jpg";
 
