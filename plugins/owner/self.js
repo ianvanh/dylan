@@ -1,5 +1,5 @@
 module.exports = {
-  cmd: ['self', 'public'],
+  cmd: /^(self|public)/i,
   category: 'owner',
   desc: 'modo de uso del bot.',
   owner: true,

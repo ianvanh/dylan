@@ -1,6 +1,6 @@
 let Config = require("../../config");
 module.exports = {
-  cmd: ['bc', 'bgc'],
+  cmd: /^(bc|bgc)/i,
   category: 'owner',
   desc: 'envia difusion a los grupos donde se encuentra el bot.',
   ignored: true,
@@ -15,7 +15,7 @@ module.exports = {
       for (let i of anu) {
         await sleep(1500);
         let txt = `「 Difusor Bot 」\n\n${text}`;
-        myBot.sendButtonLoc(i, imgbc, txt, Config.BOT_NAME, "MENU", "menu");
+        await myBot.sendImage(i, imgbc, txt);
       }
       m.reply("Difusion Enviada");
     } else if(command == "bgc") {
@@ -27,7 +27,7 @@ module.exports = {
       for (let i of anu) {
         await sleep(1500);
         let txt = `「 Difusor Bot 」\n\n${text}`;
-        myBot.sendButtonLoc(i, imgbc, txt, Config.BOT_NAME, "MENU", "menu");
+        await myBot.sendImage(i, imgbc, txt);
       }
       m.reply("Difusion Enviada");
     }

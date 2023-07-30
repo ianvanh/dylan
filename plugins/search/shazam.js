@@ -1,12 +1,13 @@
 const acrcloud = require("acrcloud");
 let { fetchJson, msgErr } = require("../../lib/myfunc");
 module.exports = {
-  cmd: ['shazam'],
+  cmd: /^(shazam)/i,
   category: 'búsqueda',
   desc: 'obten informacion de alguna cancion.',
   register: true,
   check: { pts: 1 },
-  async handler(m, {myBot, myLang, mime, User}) {
+  async handler(m, {myBot, myLang, mime, User, checkUser}) {
+    let isPremium = checkUser.premium ? 0 : -1;
     if(!m.quoted) return m.reply(myLang("shazam").quot);
     if (/image/.test(mime)) return m.reply(myLang("shazam").image);
     if (/video/.test(mime)) return m.reply(myLang("shazam").video);
@@ -27,7 +28,7 @@ module.exports = {
       msg += `📆 ${json.release_date}`
       //msg += `🎥 https://youtu.be/${json.external_metadata.youtube.vid || ""}`
       m.reply(msg)
-      User.counter(m.sender, { usage: 1 });
+      User.counter(m.sender, { usage: 1, cash: isPremium });
     } catch (e) {
       myBot.sendText(m.chat, msgErr())
       throw e

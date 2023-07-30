@@ -13,7 +13,7 @@ if (existsSync("config.env"))
   require("dotenv").config({ path: "./config.env" });
 
 // Other
-global.owner = [];
+global.owner = ['573508770421'];
 global.sessionName = "session";
 global.typeMenu = "image";
 global.timeZone = "America/Bogota";
@@ -45,6 +45,7 @@ global.BOX = {
 
 // Global Images
 global.thumb = readFileSync("./lib/bot.jpg");
+global.planes = readFileSync("./lib/planes.png");
 global.rulesImg = readFileSync("./lib/rules.jpg");
 global.maintenance = "https://telegra.ph/file/fb1477894bdd05a7d9851.jpg";
 
@@ -90,11 +91,11 @@ global.reload = (path) => {
 // env ## not modify ##
 module.exports = {
   BOT_NAME: process.env.BOT_NAME === undefined ? "🤖 DarkBox" : process.env.BOT_NAME,
-  BRANCH: "master",
+  BRANCH: "main",
   HANDLER: process.env.HANDLER === undefined ? "^[.]" : process.env.HANDLER,
   WELCOME: process.env.WELCOME === undefined ? "true" : process.env.WELCOME,
   LANG: process.env.LANGUAGE === undefined ? "ES" : process.env.LANGUAGE.toUpperCase(),
-  LOG: process.env.LOG_ERR === undefined ? "true" : process.env.LOG_ERR,
+  LOG: process.env.LOG_ERR === undefined ? "false" : process.env.LOG_ERR,
   MSG_CONSOLE: process.env.MSG_CONSOLE === undefined ? "" : process.env.MSG_CONSOLE,
   ONLINE: process.env.ONLINE === undefined ? "true" : process.env.ONLINE,
   READ: process.env.SEND_READ === undefined ? "" : process.env.SEND_READ,

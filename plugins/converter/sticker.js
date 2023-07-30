@@ -1,13 +1,13 @@
 const fs = require("fs");
 let Config = require("../../config");
 module.exports = {
-  cmd: ['sticker'],
+  cmd: /^(sticker)/i,
   category: 'convertidor',
   desc: 'convierte imagenes y videos cortos a sticker.',
   register: true,
   check: { pts: null },
   async handler(m, {myBot, myLang, text, mime, prefix, command, User}) {
-    if (!m.quoted) return m.reply(myLang("sticker").quot.replace("{}", prefix + command));
+    if (!m.quoted) return m.reply(myLang("sticker").quot);
     if (text.length > 0) { name = text;}
     else { name = "Sticker by:"; }
     myBot.sendReact(m.chat, "🕒", m.key);
@@ -20,7 +20,7 @@ module.exports = {
       await fs.unlinkSync(encmedia);
     } else if (/video/.test(mime)) {
       if ((m.quoted.msg || m.quoted).seconds > 11)
-      return m.reply(myLang("sticker").time_wait);
+        return m.reply(myLang("sticker").time_wait);
       let media = await m.quoted.download();
       let encmedia = await myBot.sendVideoAsSticker(m.chat, media, m, {
         packname: name,
@@ -28,7 +28,7 @@ module.exports = {
       });
       await fs.unlinkSync(encmedia);
     } else {
-      m.reply(myLang("sticker").end.replace("{}", prefix + command));
+      m.reply(myLang("sticker").quot);
     }
     User.counter(m.sender, { usage: 1 });
   }

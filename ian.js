@@ -73,48 +73,16 @@ module.exports = myBot = async (myBot, m, chatUpdate, store) => {
       }
     };
 
-    // reset users every 12 hours
-    /*let cron = require("node-cron");
-    cron.schedule("00 12 * * *", () => {
-        log(pint("Reseted Data", "yellow."));
-    },{
-      scheduled: true,
-      timezone: global.timeZone,
-    });*/
-
-    // Respon Cmd with media
-    /*if (isMedia && m.msg.fileSha256 && m.msg.fileSha256.toString("base64")) {
-      let hash = m.msg.fileSha256.toString("base64");
-      let { text, mentionedJid } = hash;
-      let messages = await generateWAMessage( m.chat, {
-        text: text,
-        mentions: mentionedJid
-      },{
-        userJid: myBot.user.id,
-        quoted: m.quoted && m.quoted.fakeObj,
-      });
-      messages.key.fromMe = areJidsSameUser(m.sender, myBot.user.id);
-      messages.key.id = m.key.id;
-      messages.pushName = m.pushName;
-      if (m.isGroup) messages.participant = m.sender;
-      let msg = {
-        ...chatUpdate,
-        messages: [proto.WebMessageInfo.fromObject(messages)],
-        type: "append",
-      };
-      myBot.ev.emit("messages.upsert", msg);
-    };*/
-    
-    const cmd = Object.values(attr.commands).find((cmn) => cmn.cmd && cmn.cmd.includes(command) && !cmn.disabled)
+    const cmd = Object.values(attr.commands).find((cmn) => cmn.cmd && command.match(cmn.cmd) && !cmn.disabled)
     if (budy) {
       if (regUser === false) {
         new User(m.sender, pushname)
         myBot.sendText(m.chat, myLang("global").welcome)
       } else if (cmd) {
-      if (cmd.owner && !isCreator) return //myBot.sendText(m.chat, myLang("global").owner);
-      else if(checkUser.block == true) return myBot.sendText(m.chat, myLang("global").block);
-      /*else if (checkUser.points < cmd.check.pts) {
-        return myBot.sendText(m.chat, myLang("global").no_points) }*/
+        if (cmd.owner && !isCreator) return //myBot.sendText(m.chat, myLang("global").owner);
+        else if(checkUser.block == true) return myBot.sendText(m.chat, myLang("global").block);
+        else if (checkUser.cash < cmd.check.pts) {
+          return myBot.sendImage(m.chat, global.planes, myLang("global").no_points) }
         await cmd.handler(m, {
           myBot,
           myLang,
@@ -127,22 +95,24 @@ module.exports = myBot = async (myBot, m, chatUpdate, store) => {
           participants,
           regUser,
           quoted,
+          args,
+          checkUser,
         });
       } else {
         const is_event = Object.values(attr.commands).filter((func) => !func.cmd && !func.disabled);
         for (const event of is_event) {
           if(checkUser.block == true) return myBot.sendText(m.chat, myLang("global").block);
-          /*if (checkUser.points < event.check.pts) {
-            return myBot.sendText(m.chat, myLang("global").no_points) }*/
+          else if (checkUser.cash < event.check.pts) {
+            return myBot.sendImage(m.chat, global.planes, myLang("global").no_points) }
           await event.handler(m, {
-            myBot, myLang, budy, pushname, User,
+            myBot, myLang, budy, pushname, User, checkUser,
           })
         }
       }
     };
 
   } catch (err) {
-    if (Config.LOG == "false") return;
+    if (Config.LOG == "false") return log(err);
     myBot.sendText(m.chat, msgErr())
     myBot.sendMessage(myBot.user.id, { text: `*-- ${myLang("err").msgReport} [ ${Config.BOT_NAME} ] --*\n` + "*Error:* ```" + err + "```"});
   };

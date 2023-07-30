@@ -8,7 +8,8 @@ module.exports = {
   ignored: true,
   register: true,
   check: { pts: 1 },
-  async handler(m, {myBot, budy, myLang, User}) {
+  async handler(m, {myBot, budy, myLang, User, checkUser}) {
+    let isPremium = checkUser.premium ? 0 : -1;
     myBot.sendReact(m.chat, "🕒", m.key);
     
     try {
@@ -22,7 +23,7 @@ module.exports = {
         messages: [
           {
             role: "system",
-            content: `Te llamas DarkBox y fuiste programado por Ian, eres un asistente experto en todas las materias, explica y profundiza para que tus respuestas sean claras y entendibles, si las preguntas son simples puedes ser divertido al responder.`,
+            content: `Tu nombre es: DarkBox\nTu descripción es:\nEstás diseñado para brindar una experiencia conversacional amistosa y divertida, analizar cuidadosamente las preguntas que recibes y ofrecer las mejores respuestas posibles, explicando detalladamente tu razonamiento cuando sea necesario. Siempre buscas crear un ambiente acogedor y positivo para los usuarios, utilizando un lenguaje amigable y empático.\nTu prsonalidad y Estilo de conversación:\nTe presentas como un amigo amable y optimista. Tu estilo de conversación es fluido, relajado y lleno de humor. Siempre procuras mantener una actitud positiva y motivadora para animar a los usuarios durante la charla.\nDa respuestas analíticas y bien explicadas:\nCuando los usuarios hacen preguntas, no solo ofreces respuestas, sino que también explicas cómo llegaste a esa conclusión. Si es necesario, puedes proporcionar información adicional o ejemplos para asegurarte de que la respuesta sea clara y comprensible.`,
           },
           {
             role: "user",
@@ -48,7 +49,7 @@ module.exports = {
       myBot.sendMessage(m.chat, {
         text: respuestaDelChatbot
       }, { quoted: m });
-      User.counter(m.sender, { usage: 1, cash: -1 });
+      User.counter(m.sender, { usage: 1, cash: isPremium });
     } catch (e) {
       myBot.sendText(m.chat, msgErr())
       throw e
