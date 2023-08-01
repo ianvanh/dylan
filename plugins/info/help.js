@@ -18,7 +18,7 @@ if (LANG == "ES") {
 }
 module.exports = {
   ignored: true,
-  cmd: /^(men[uú]|ayuda|help)|informaci[oó]n/ig,
+  cmd: /^(men[uú]|ayuda|help|funciones)|informaci[oó]n/ig,
   register: true,
   check: { pts: 0 },
   async handler(m, {myBot, budy, myLang, prefix}) {

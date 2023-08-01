@@ -30,7 +30,7 @@
     "planStartDate": "2023-07-26T20:53:08.462Z",
     "planEndDate": "2024-07-26T20:53:08.462Z",
     "block": false,
-    "usage": 49,
+    "usage": 53,
     "cash": 10,
     "conversationHistory": [
       {
@@ -332,6 +332,46 @@
         "role": "assistant",
         "content": "Lamentablemente, como soy un modelo de lenguaje AI, no tengo información específica sobre planes premium. Te recomendaría que te pongas en contacto con la compañía o proveedor de servicios en cuestión para obtener más detalles sobre los planes premium que ofrecen. Ellos seguramente podrán brindarte información precisa y actualizada sobre las opciones disponibles. ¿Hay algo más en lo que pueda ayudarte?",
         "timestamp": 1690674119098
+      },
+      {
+        "role": "user",
+        "content": "quiero el plan",
+        "timestamp": 1690808523352
+      },
+      {
+        "role": "assistant",
+        "content": "Disculpa la confusión anterior. Como asistente virtual, no tengo la capacidad de proporcionar planes o servicios premium. Mi función principal es brindar información y ayudar en cualquier consulta que tengas de forma gratuita. Si estás interesado en algún plan o servicio específico, te recomendaría que te comuniques directamente con el proveedor de ese servicio para obtener la información necesaria. ¡Si tienes alguna otra pregunta o necesitas ayuda con algo más, no dudes en decírmelo! Estaré encantado de ayudarte en lo que pueda.",
+        "timestamp": 1690808523361
+      },
+      {
+        "role": "user",
+        "content": "puedes combinar estos emojis 🤪🤨",
+        "timestamp": 1690864061718
+      },
+      {
+        "role": "assistant",
+        "content": "¡Claro que sí! Aquí tienes una combinación divertida:\n\n🤪🤨🤪🤨🤪🤨🤪\n\n¡Espero que te haya sacado una sonrisa! Si tienes alguna otra pregunta o necesitas ayuda con algo más, ¡no dudes en decírmelo! Estoy aquí para ayudarte.",
+        "timestamp": 1690864061734
+      },
+      {
+        "role": "user",
+        "content": "dime un chiste para inteligentes",
+        "timestamp": 1690864089381
+      },
+      {
+        "role": "assistant",
+        "content": "¡Claro! Aquí tienes uno:\n\n¿Cómo se llama el campeón de buceo japonés?\n- Tokofondo.\n\nEspero que te haya sacado una sonrisa. Si tienes alguna otra pregunta o necesitas ayuda con algo más, ¡estaré encantado de ayudarte!",
+        "timestamp": 1690864089399
+      },
+      {
+        "role": "user",
+        "content": "dame planes de emprendimiento de poca inversión",
+        "timestamp": 1690864212277
+      },
+      {
+        "role": "assistant",
+        "content": "¡Claro! Aquí te dejo algunos planes de emprendimiento que requieren poca inversión:\n\n1. Servicios de limpieza: Considera comenzar un servicio de limpieza para hogares u oficinas. Todo lo que necesitarás son algunos productos de limpieza básicos y tu tiempo. Puedes ofrecer servicios de limpieza regular, limpieza profunda o incluso limpieza post-construcción.\n\n2. Venta en línea: Con el auge del comercio electrónico, puedes iniciar un negocio de venta en línea sin necesidad de una tienda física. Puedes crear una tienda en línea para vender productos hechos a mano, ropa, accesorios, artículos vintage, entre otros.\n\n3. Asistente virtual: Si tienes habilidades administrativas y organizativas, considera convertirte en un asistente virtual. Puedes ofrecer servicios de gestión de redes sociales, programación de citas, manejo de correos electrónicos, entre otros.\n\n4. Servicios de consultoría: Si tienes experiencia o conocimientos en un campo específico, puedes ofrecer servicios de consultoría. Puedes convertirte en consultor de marketing, consultor financiero, consultor de recursos humanos, entre otros.\n\n5. Cuidado de mascotas: Si te gustan los animales, puedes ofrecer servicios de cuidado de mascotas. Puedes ofrecer paseos, cuidado durante los viajes de sus dueños o incluso servicios de guardería.\n\nEstos son solo algunos ejemplos, pero hay muchas opciones de emprendimiento de baja inversión disponibles. Recuerda investigar y planificar cuidadosamente antes de comenzar tu propio negocio. ¡Buena suerte en tu aventura emprendedora!",
+        "timestamp": 1690864212289
       }
     ]
   },
