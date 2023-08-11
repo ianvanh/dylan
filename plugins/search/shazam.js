@@ -5,6 +5,7 @@ module.exports = {
   category: 'búsqueda',
   desc: 'obten informacion de alguna cancion.',
   register: true,
+  isPrivate: true,
   check: { pts: 1 },
   async handler(m, {myBot, myLang, mime, User, checkUser}) {
     let isPremium = checkUser.premium ? 0 : -1;

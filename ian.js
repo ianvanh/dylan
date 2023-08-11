@@ -80,7 +80,8 @@ module.exports = myBot = async (myBot, m, chatUpdate, store) => {
         myBot.sendText(m.chat, myLang("global").welcome)
       } else if (cmd) {
         if (cmd.owner && !isCreator) return //myBot.sendText(m.chat, myLang("global").owner);
-        else if(checkUser.block == true) return myBot.sendText(m.chat, myLang("global").block);
+        else if (checkUser.block == true) return myBot.sendText(m.chat, myLang("global").block);
+        else if (cmd.isPrivate && m.isGroup) return
         else if (checkUser.cash < cmd.check.pts) {
           return myBot.sendImage(m.chat, global.planes, myLang("global").no_points) }
         await cmd.handler(m, {
@@ -101,7 +102,8 @@ module.exports = myBot = async (myBot, m, chatUpdate, store) => {
       } else {
         const is_event = Object.values(attr.commands).filter((func) => !func.cmd && !func.disabled);
         for (const event of is_event) {
-          if(checkUser.block == true) return myBot.sendText(m.chat, myLang("global").block);
+          if (checkUser.block == true) return myBot.sendText(m.chat, myLang("global").block);
+          else if (event.isPrivate && m.isGroup) return
           else if (checkUser.cash < event.check.pts) {
             return myBot.sendImage(m.chat, global.planes, myLang("global").no_points) }
           await event.handler(m, {

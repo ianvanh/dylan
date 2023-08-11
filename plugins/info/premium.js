@@ -3,6 +3,7 @@ module.exports = {
   category: 'información',
   desc: 'solicitud',
   ignored: true,
+  isPrivate: true,
   check: { pts: 0 },
   async handler(m, {myBot, myLang}) {
     myBot.sendReact(m.chat, "🕒", m.key);

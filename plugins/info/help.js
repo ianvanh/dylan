@@ -18,6 +18,7 @@ if (LANG == "ES") {
 }
 module.exports = {
   ignored: true,
+  isPrivate: true,
   cmd: /^(men[uú]|ayuda|help|funciones)|informaci[oó]n/ig,
   register: true,
   check: { pts: 0 },

@@ -6,6 +6,7 @@ module.exports = {
   category: 'ia',
   desc: 'inteligencia artificial para creación de imagenes.',
   register: true,
+  isPrivate: true,
   check: { pts: 1 },
   async handler(m, {myBot, myLang, command, text, User, checkUser}) {
     let isPremium = checkUser.premium ? 0 : -1;

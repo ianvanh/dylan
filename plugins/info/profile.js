@@ -4,6 +4,7 @@ module.exports = {
   category: 'información',
   desc: 'obten tu informacion en el bot.',
   register: true,
+  isPrivate: true,
   check: { pts: 0 },
   async handler(m, {User, checkUser}) {
     let emojis = {"a": "🥉", "b": "🥈", "c": "🥇",};

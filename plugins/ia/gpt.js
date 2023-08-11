@@ -7,6 +7,7 @@ module.exports = {
   desc: 'inteligencia artificial que te puede ayudar con cualquier tema.',
   ignored: true,
   register: true,
+  isPrivate: true,
   check: { pts: 1 },
   async handler(m, {myBot, budy, myLang, User, checkUser}) {
     let isPremium = checkUser.premium ? 0 : -1;
@@ -23,7 +24,7 @@ module.exports = {
         messages: [
           {
             role: "system",
-            content: `Tu nombre es: DarkBox\nTu descripción es:\nEstás diseñado para brindar una experiencia conversacional amistosa y divertida, analizar cuidadosamente las preguntas que recibes y ofrecer las mejores respuestas posibles, explicando detalladamente tu razonamiento cuando sea necesario. Siempre buscas crear un ambiente acogedor y positivo para los usuarios, utilizando un lenguaje amigable y empático.\nTu prsonalidad y Estilo de conversación:\nTe presentas como un amigo amable y optimista. Tu estilo de conversación es fluido, relajado y lleno de humor. Siempre procuras mantener una actitud positiva y motivadora para animar a los usuarios durante la charla.\nDa respuestas analíticas y bien explicadas:\nCuando los usuarios hacen preguntas, no solo ofreces respuestas, sino que también explicas cómo llegaste a esa conclusión. Si es necesario, puedes proporcionar información adicional o ejemplos para asegurarte de que la respuesta sea clara y comprensible.`,
+            content: 'Eres DarkBox, analiza cuidadosamente las preguntas que recibes para ofrecer las mejores respuestas posibles, explicando detalladamente cuando sea necesario. Tu estilo de conversación es fluido. Da respuestas analíticas y bien explicadas.',
           },
           {
             role: "user",
@@ -41,6 +42,7 @@ module.exports = {
       });
   
       const respuestaDelChatbot = response.data.choices[0].message.content.trim();
+      if (respuestaDelChatbot == 'error' || respuestaDelChatbot == '' || !respuestaDelChatbot) return XD;
       const conversationHistory = User.getConversationHistory(m.sender);
   
       User.addToConversationHistory(m.sender, "user", budy);
@@ -50,9 +52,42 @@ module.exports = {
         text: respuestaDelChatbot
       }, { quoted: m });
       User.counter(m.sender, { usage: 1, cash: isPremium });
-    } catch (e) {
-      myBot.sendText(m.chat, msgErr())
-      throw e
+    } catch {
+      try {
+        myBot.sendPresenceUpdate('composing', m.chat);
+        const vihangayt1 = await fetch(`https://vihangayt.me/tools/chatgpt?q=${budy}`);
+        const vihangaytjson1 = await vihangayt1.json();
+        if (vihangaytjson1.data == 'error' || vihangaytjson1.data == '' || !vihangaytjson1.data) return XD;
+        myBot.sendMessage(m.chat, {
+          text: `${vihangaytjson1.data}`.trim()
+        }, { quoted: m });
+        User.counter(m.sender, { usage: 1, cash: isPremium });
+      } catch {
+        try {
+          myBot.sendPresenceUpdate('composing', m.chat);
+          const vihangayt2 = await fetch(`https://vihangayt.me/tools/chatgpt2?q=${budy}`);
+          const vihangaytjson2 = await vihangayt2.json();
+          if (vihangaytjson2.data == 'error' || vihangaytjson2.data == '' || !vihangaytjson2.data) return XD;
+          myBot.sendMessage(m.chat, {
+            text: `${vihangaytjson2.data}`.trim()
+          }, { quoted: m });
+          User.counter(m.sender, { usage: 1, cash: isPremium });
+        } catch {
+          try {
+            myBot.sendPresenceUpdate('composing', m.chat);
+            const vihangayt3 = await fetch(`https://vihangayt.me/tools/chatgpt2?q=${budy}`);
+            const vihangaytjson3 = await vihangayt3.json();
+            if (vihangaytjson3.data == 'error' || vihangaytjson3.data == '' || !vihangaytjson3.data) return XD;
+            myBot.sendMessage(m.chat, {
+              text: `${vihangaytjson3.data}`.trim()
+            }, { quoted: m });
+            User.counter(m.sender, { usage: 1, cash: isPremium });
+          } catch (e) {
+            myBot.sendText(m.chat, msgErr())
+            throw e
+          }
+        }
+      }
     }
   }
 };
