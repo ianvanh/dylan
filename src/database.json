@@ -19,8 +19,8 @@
     "planStartDate": null,
     "planEndDate": null,
     "block": false,
-    "usage": 9,
-    "cash": 1,
+    "usage": 10,
+    "cash": 0,
     "conversationHistory": [
       {
         "role": "user",
