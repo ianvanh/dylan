@@ -1,0 +1,50 @@
+{
+  "__JSON__": true,
+  "LANGUAGE": "Indonesia",
+  "LANGCODE": "id",
+  "AUTHOR": "Ian VanH",
+  "STRINGS": {
+    "updater": {
+      "UPDATE": "*Bot Anda telah sepenuhnya diperbarui!*",
+      "NEW_UPDATE": "*Ada pembaruan baru yang tersedia untuk bot ini!*\n\nPerubahan:\n```",
+      "UPDATED_LOCAL": "*Pembaruan berhasil dilakukan!*"
+    },
+    "sticker": {
+      "quot": "Untuk membuat stiker, kirim gambar/gif dan balas dengan perintah *{}*.",
+      "video": "Opsi video menjadi stiker sedang dinonaktifkan sementara 🙃",
+      "img": "Kirim hanya gambar/gif."
+    },
+    "ia": {
+      "msg": "🤖 *Saya di sini*",
+      "name": "Nama saya {}",
+      "gpt_msg": "Apa yang ingin Anda cari?"
+    },
+    "shazam": {
+      "quot": "*Balas dengan audio yang ingin Anda analisis.*",
+      "err": "*Tidak ada data ditemukan untuk audio tersebut. Cobalah dengan yang lain :(*",
+      "image": "*Gambar tidak dapat dianalisis, hanya audio yang bisa!*",
+      "video": "*Video tidak dapat dianalisis, hanya audio yang bisa!*"
+    },
+    "own": {
+      "public": "Sekarang semua orang dapat menggunakan Bot ini.",
+      "self": "Hanya Anda yang dapat menggunakan Bot ini."
+    },
+    "global": {
+      "by": "Dibuat oleh {}",
+      "block": "Anda diblokir.",
+      "endLimit": "Batas harian Anda telah berakhir, batas akan diatur ulang setiap 12 jam",
+      "err": "🤖 Sepertinya terjadi kesalahan.\nSilakan coba lagi.",
+      "welcome": "Halo! Saya *DarkBox*, asisten pribadi Anda. Saya di sini untuk membantu Anda dengan pertanyaan Anda. Jika Anda memerlukan sesuatu, jangan ragu bertanya kepada saya.\nSelain membantu dengan pertanyaan apa pun, berikut adalah beberapa fungsi yang tersedia:\n📌 Saya dapat membuat stiker sebanyak yang Anda inginkan, cukup kirimkan gambar atau video pendek tidak lebih dari 10 detik dan kemudian balas dengan kata 'stiker'\n📌 Jika Anda tidak tahu nama sebuah lagu, cukup rekam sekitar 5 detik dan kirimkan kepada saya, lalu balas audio tersebut dengan kata 'shazam', dan saya akan mencari nama lagu tersebut untuk Anda.\n📌 Saya dapat membuat gambar dari teks atau ide. Anda bisa mengatakan 'buat' dan beri saya ide yang Anda miliki, dan saya akan mencoba menggambarkannya untuk Anda.\nContoh: buat suasana senja hujan di pantai\n📌 Jika Anda mengetik kata 'status', Anda dapat melihat informasi profil Anda di bot ini.\n\nSekarang bahwa Anda telah melihat apa yang bisa saya lakukan, beri tahu saya dari mana Anda ingin memulai 😊",
+      "no_points": "*Kredit Tidak Cukup*.\nJika Anda ingin menggunakan semua fungsi tanpa batasan, tingkatkan ke premium di tautan berikut https://w.app/d1hX5c 😊",
+      "owner": "Fungsi khusus untuk pemilik bot.",
+      "success": "✓ Fungsi berhasil dilakukan."
+    },
+    "work_type": {
+      "public": "🤖 *DrkBot beroperasi dalam mode publik*\n\n_Jangan uji perintah di sini. Ini adalah ruang LOG Anda._\n_Anda dapat menguji perintah di obrolan mana pun._",
+      "private": "🤖 *DrkBot beroperasi dalam mode pribadi*\n\n_Jangan uji perintah di sini. Ini adalah ruang LOG Anda._\n_Anda dapat menguji perintah di obrolan mana pun._"
+    },
+    "err": {
+      "msgReport": "LAPORAN KESALAHAN"
+    }
+  }
+}

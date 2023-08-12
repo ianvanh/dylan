@@ -114,7 +114,7 @@ module.exports = myBot = async (myBot, m, chatUpdate, store) => {
     };
 
   } catch (err) {
-    if (Config.LOG == "false") return log(err);
+    if (Config.LOG == "false") return;
     myBot.sendText(m.chat, msgErr())
     myBot.sendMessage(myBot.user.id, { text: `*-- ${myLang("err").msgReport} [ ${Config.BOT_NAME} ] --*\n` + "*Error:* ```" + err + "```"});
   };

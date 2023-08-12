@@ -10,8 +10,9 @@
       "UPDATED_LOCAL": "*La actualización fue exitosa!"
     },
     "sticker": {
-      "quot": "Responde una imagen o video máximo 10 segundos.",
-      "time_wait": "Máximo 10 segundos!"
+      "quot": "Para crear sticker envia una imagen/gif y respondelo con el comando *{}*.",
+      "video": "La opcion de video a sticker está temporalmente deshabilitada 🙃",
+      "img": "Solo envia imagen/gif."
     },
     "ia": {
       "msg": "🤖 *Si aquí estoy*",
