@@ -19,6 +19,7 @@ const FileType = require('file-type')
 const path = require('path')
 const _ = require('lodash')
 const axios = require('axios')
+const Jimp = require('jimp')
 const PhoneNumber = require('awesome-phonenumber')
 const { imageToWebp, writeExifImg, writeExif } = require('./lib/exif')
 const { smsg, getBuffer, getSizeMedia, sleep, getFile } = require('./lib/myfunc')
@@ -289,9 +290,8 @@ async function startMybot() {
       * @param {Numeric} Height
       */
       myBot.reSize = async (image, width, height) => {
-        let jimp = require('jimp')
-        var oyy = await jimp.read(image);
-        var kiyomasa = await oyy.resize(width, height).getBufferAsync(jimp.MIME_JPEG)
+        var oyy = await Jimp.read(image);
+        var kiyomasa = await oyy.resize(width, height).getBufferAsync(Jimp.MIME_JPEG)
         return kiyomasa
       }
 
@@ -391,13 +391,11 @@ async function startMybot() {
      */
     myBot.sendImageAsSticker = async (jid, path, quoted, options = {}) => {
         let buff = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
-        let buffer
         if (options && (options.packname || options.author)) {
             buffer = await writeExifImg(buff, options)
         } else {
             buffer = await imageToWebp(buff)
         }
-
         await myBot.sendMessage(jid, { sticker: { url: buffer }, ...options }, { quoted })
         return buffer
     }
