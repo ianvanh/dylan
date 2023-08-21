@@ -115,7 +115,6 @@ pkg upgrade
 pkg install git -y
 pkg install nodejs -y
 pkg install ffmpeg -y
-pkg install imagemagick -y
 git clone https://github.com/ianvanh/dylan
 cd dylan
 
@@ -208,7 +207,7 @@ By use the Dylan, you are deemed to have accepted these responsibilities.
 [![Ian](https://github.com/ianvanh.png?size=150)](#) |
 ----|
 [Dylan](https://t.me/Dark1522) |
-Modifier, Translator, Bug Fixes |
+Creator, Translator, Bug Fixes |
 
 ## Thanks To
 - [@adiwajshing](https://github.com/adiwajshing) for coded [Baileys](https://github.com/adiwajshing/Baileys)

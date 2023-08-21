@@ -1,7 +1,7 @@
 {
   "name": "DrkBot-MD",
   "version": "1.0.0",
-  "description": "Project DrkBot helping to improve your Whatsapp experience.",
+  "description": "IA para tu WhatsApp",
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
@@ -30,6 +30,8 @@
     "crypto": "^1.0.1",
     "crypto-js": "^4.1.1",
     "dotenv": "^16.0.0",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
     "file-type": "^16.5.3",
     "fluent-ffmpeg": "^2.1.2",
     "fs": "0.0.1-security",

@@ -5,7 +5,7 @@
   you may not use this file except in compliance with the License.
 */
 
-require('./config')
+require('./config'), require('./src/server')
 const { default: myBotConnect, DisconnectReason, generateWAMessageFromContent, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto, generateWAMessage, getContentType } = require("@adiwajshing/baileys")
 //const { DisconnectReason, generateWAMessageFromContent, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto, generateWAMessage, getContentType } = require("@adiwajshing/baileys")
 const { useSingleFileAuthState } = require('./lib/s-auth-state')
