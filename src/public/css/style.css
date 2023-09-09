@@ -238,7 +238,7 @@ form-input:focus:invalid { border-color: hsl(0, 43%, 51%); }
 
 @media (max-width: 1535px) {
    header {
-    padding: 15px 9%;
+    padding: 33px 9%;
     transition: .2s;
   }
   .icons {
@@ -269,6 +269,9 @@ form-input:focus:invalid { border-color: hsl(0, 43%, 51%); }
   section {
     padding: 0 3%;
     transition: .2s;
+  }
+  .navlist {
+    margin-right: 20px;
   }
   .hero-text {
     padding-top: 115px;
@@ -308,7 +311,7 @@ form-input:focus:invalid { border-color: hsl(0, 43%, 51%); }
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 50px 20px;
+    padding: 20px 20px;
     transition: all .55s ease;
   }
   .navlist::before {
