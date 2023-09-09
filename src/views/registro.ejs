@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('src/head-l') %>
+    <style type="text/css">
+      input {
+        margin: 26px auto;
+      }
+    </style>
+</head>
+<body>
+    <img src="/lib/logo.jpg" alt="logo" />
+    <div class="main">
+     <div class="singup">
+        <h1>REGISTRAR</h1>
+        <form action="/registro" method="POST">
+          <input type="text" id="username" name="username" placeholder="Nombre De Usuario" value="<% if(typeof valores != 'undefined') { %><%= valores.username %><%}%>"/>
+          <input type="text" id="number" name="number" placeholder="Tu # de WhatsApp" value="<% if(typeof valores != 'undefined') { %><%= valores.number %><%}%>"/>
+          <input type="password" id="password" name="password" placeholder="Contraseña" value="<% if(typeof valores != 'undefined') { %><%= valores.password %><%}%>"/>
+          <button type="submit" class="myBtn">
+            <span>Registro</span>
+            <i></i>
+          </button>
+        </form>
+        <p class="oth">Ya tienes cuenta? <a href="/login"><b>Inicia Sesión</b></a></p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <% if(typeof alert != "undefined") { %>
+      <script>
+        Swal.fire({
+          icon: '<%= icon %>',
+          title: '<%= tit %>',
+          text: '<%= msg %>',
+          showConfirmButton: <%= conf %>,
+          timer: <%= time %>
+        }).then(() => {
+          window.location='<%= ruta %>'
+        })
+      </script>
+    <% } %>
+</body>
+</html>

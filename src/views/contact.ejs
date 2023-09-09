@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <%- include('src/header') %>
+</head>
+<body>
+  <header>
+    <%- include('src/nav') %>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Inteligencia Artificial en tu WhatsApp</h1>
+    </div>
+    
+      <div class="hero-contact">
+        <form action="https://formsubmit.co/bdaaf03dea2104c473355676ebeb346d" method="POST" class="form" data-form>
+          <div class="input-wrapper">
+            <input type="text" name="fullname" class="form-input" placeholder="Nombre" required data-form-input>
+            <input type="text" name="phone" class="form-input" placeholder="Telefono" required data-form-input>
+            <input type="email" name="email" class="form-input" placeholder="Email" required data-form-input>
+          </div>
+          <textarea id="content" name="message" class="w-full form-input" placeholder="Mensaje" required data-form-input></textarea>
+          <button class="form-btn" type="submit" disabled data-form-btn>
+            <i class="ri-send-plane-fill"></i>
+            <span>Enviar Mensaje</span>
+          </button>
+          <input type="hidden" name="_next" value="/contacto">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+        </form>
+      </div>
+  </section>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -21,14 +21,16 @@ function totalHit() {
 const keyUsageLimit = 3;
 
 class User {
-  constructor(phone, name) {
+  constructor(phone, name, pass = '') {
     this.phone = phone;
     this.name = name;
+    this.pass = pass;
 
     if (!database[this.phone]) {
       database[this.phone] = {
         id: randomId(6),
         name: this.name,
+        pass: this.pass,
         premium: false,
         plan: null,
         planStartDate: null,
@@ -59,6 +61,7 @@ class User {
         number: phone,
         id: database[phone].id,
         name: database[phone].name,
+        pass: database[phone].pass,
         premium: database[phone].premium,
         plan: database[phone].plan,
         planStartDate: database[phone].planStartDate,

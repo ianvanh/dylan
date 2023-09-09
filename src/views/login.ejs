@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('src/head-l') %>
+</head>
+<body>
+    <img src="/lib/logo.jpg" alt="logo" />
+    <div class="main">
+     <div class="singup">
+        <h1>INGRESAR</h1>
+        <form action="/login" method="POST">
+          <input type="text" id="number" name="number" placeholder="WhatsApp" value="<% if(typeof valores != 'undefined') { %><%= valores.number %><%}%>" required/>
+          <input type="password" id="password" name="password" placeholder="Contraseña" value="<% if(typeof valores != 'undefined') { %><%= valores.password %><%}%>" required/>
+          <button type="submit" class="myBtn">
+            <span>Acceder</span>
+            <i></i>
+          </button>
+        </form>
+        <p class="oth">No tienes cuenta? <a href="/registro"><b>Registrar</b></a></p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <% if(typeof alert != "undefined") { %>
+      <script>
+        Swal.fire({
+          icon: '<%= icon %>',
+          title: '<%= tit %>',
+          text: '<%= msg %>',
+          showConfirmButton: <%= conf %>,
+          timer: <%= time %>
+        }).then(() => {
+          window.location='<%= ruta %>'
+        })
+      </script>
+    <% } %>
+</body>
+</html>

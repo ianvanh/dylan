@@ -5,7 +5,7 @@
   you may not use this file except in compliance with the License.
 */
 
-require('./config'), require('./src/server')
+require('./config'), require('./src/index')
 const { default: myBotConnect, DisconnectReason, generateWAMessageFromContent, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto, generateWAMessage, getContentType } = require("@adiwajshing/baileys")
 //const { DisconnectReason, generateWAMessageFromContent, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto, generateWAMessage, getContentType } = require("@adiwajshing/baileys")
 const { useSingleFileAuthState } = require('./lib/s-auth-state')
@@ -86,6 +86,7 @@ async function startMybot() {
       browser: ["DrkBot", "Safari", "13.0.0"],
       auth: state
     })
+    global.client = myBot
 
     store.bind(myBot.ev)
 
